@@ -2,7 +2,7 @@ server:
   port: 2023
 spring:
   application:
-    name: dfpm-enverollment-service
+    name: gbha-libro-service
 
   datasource:
     url: jdbc:postgresql://localhost:5432/dfpm-enverollment
