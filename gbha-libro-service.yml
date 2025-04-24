@@ -5,9 +5,9 @@ spring:
     name: gbha-libro-service
 
   datasource:
-    url: CONFIGURACION NEON
-    username: neondb_owner (USUARIO)
-    password: CONTRASEÑA
+    url: jdbc:postgresql://ep-young-brook-a4jkg7zu-pooler.us-east-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_IT01BDrCNatA&sslmode=require
+    username: neondb_owner
+    password: npg_IT01BDrCNatA&sslmode
     driver-class-name: org.postgresql.Driver
 
   jpa:
