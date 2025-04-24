@@ -3,7 +3,7 @@ server:
 spring:
   application:
     name: prac-prestamo-service
- datasource:
+  datasource:
     url: jdbc:postgresql://ep-young-brook-a4jkg7zu-pooler.us-east-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_IT01BDrCNatA&sslmode=require
     username: neondb_owner
     password: npg_IT01BDrCNatA
