@@ -1,0 +1,31 @@
+server:
+  port: 3032
+spring:
+  application:
+    name: prac-prestamo-service
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  sql:
+    init:
+      platform: postgres
+  datasource:
+    url: jdbc:postgresql://localhost:5432/prac-prestamo
+    username: postgres
+    password: "123456"
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:3030/eureka
+  instance:
+    hostname: localhost
