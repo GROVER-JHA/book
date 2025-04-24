@@ -1,0 +1,33 @@
+server:
+  port: 2023
+spring:
+  application:
+    name: dfpm-enverollment-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dfpm-enverollment
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      platform: postgres
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2020/eureka
+  instance:
+    hostname: localhost

@@ -1,0 +1,33 @@
+server:
+  port: 2999
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2020/eureka
+      #defaultZone: ${EUREKA_URI:http://localhost:8090/eureka}
+  instance:
+    hostname: localhost
+    #instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+spring:
+  cloud:
+    gateway:
+
+      discovery:
+        locator:
+          enable: true
+      routes:
+        - id: dfpm-student-service
+          uri: lb://dfpm-student-service
+          predicates:
+            - Path=/student/**, /profession/**
+
+        - id: dfpm-course-service
+          uri: lb://dfpm-course-service
+          predicates:
+            - Path=/course/**
+
+        - id: dfpm-enverollment-service
+          uri: lb://dfpm-enverollment-service
+          predicates:
+            - Path=/enrollment/**
