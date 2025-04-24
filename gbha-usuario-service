@@ -2,10 +2,10 @@ server:
   port: 2022
 spring:
   application:
-    name: dfpm-course-service
+    name: gbha-usuario-service
 
-  datasource:
-    url: jdbc:mysql://localhost:3306/dfpm-course
+ datasource:
+    url: jdbc:mysql://localhost:3306/usuario
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -14,7 +14,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
-
 springdoc:
   api-docs:
     enabled: true
