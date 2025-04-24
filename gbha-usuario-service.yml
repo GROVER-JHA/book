@@ -4,7 +4,7 @@ spring:
   application:
     name: gbha-usuario-service
 
- datasource:
+  datasource:
     url: jdbc:mysql://localhost:3306/usuario
     username: root
     password:
