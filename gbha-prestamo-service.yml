@@ -3,19 +3,17 @@ server:
 spring:
   application:
     name: prac-prestamo-service
+ datasource:
+    url: jdbc:postgresql://ep-young-brook-a4jkg7zu-pooler.us-east-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_IT01BDrCNatA&sslmode=require
+    username: neondb_owner
+    password: npg_IT01BDrCNatA
+    driver-class-name: org.postgresql.Driver
+
   jpa:
-    database: POSTGRESQL
-    show-sql: true
-    generate-ddl: true
     hibernate:
       ddl-auto: update
-  sql:
-    init:
-      platform: postgres
-  datasource:
-    url: jdbc:postgresql://localhost:5432/prac-prestamo
-    username: postgres
-    password: "123456"
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 springdoc:
   api-docs:
